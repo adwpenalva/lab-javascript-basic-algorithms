@@ -62,3 +62,36 @@ if (comparisonOrder < 0) {
 } else {
   console.log('What?! You both have the same name?');
 }
+
+// Bonus 1:
+
+let lorem =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis malesuada ex. In hac habitasse platea dictumst. Pellentesque vel eleifend neque, at interdum enim. In hac habitasse platea dictumst. Fusce pulvinar dictum congue. Nam aliquam vitae dolor eget ornare. Integer turpis felis, fermentum nec dictum sit amet, sagittis vel lectus. Sed sed eros justo. Curabitur sed eros nunc. Aenean quis commodo magna. Pellentesque quis consequat enim, quis rhoncus nisl. Aliquam luctus tincidunt sapien a imperdiet. Fusce commodo eleifend orci, et hendrerit nibh congue vitae. Vivamus tristique convallis justo dictum semper. Nam facilisis orci risus, sed luctus orci dignissim vitae. Proin quis bibendum massa, a mollis mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ullamcorper, turpis sed tempor lacinia, dolor tortor viverra massa, vitae porta ligula elit eget erat. Proin quam magna, sodales non dui vitae, gravida sollicitudin orci. Vivamus aliquam magna id leo efficitur, nec elementum dolor pretium. Proin ultrices laoreet hendrerit. Curabitur finibus augue quam. Maecenas convallis, ex id ultrices sollicitudin, metus nisl elementum ipsum, eu eleifend odio est auctor tellus. Pellentesque vitae placerat erat, sit amet interdum erat. Vivamus quis enim eget elit maximus pharetra at non sem. Proin quis ex elit. Maecenas laoreet viverra diam sed porta. In ac nisl et nulla sollicitudin consequat ut at nisi. Etiam in leo at ipsum accumsan aliquam. Phasellus varius neque nec dapibus consequat. Nunc eget interdum turpis. Morbi pharetra ipsum id lobortis rutrum. Aliquam placerat lectus purus, at scelerisque quam convallis ut. Proin pellentesque risus ante, in sollicitudin ex egestas quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.';
+
+let wordCount = string => {
+  let auxArray = string.split(' ');
+  let etCounter = 0;
+  console.log('Number of words in the string: ', auxArray.length);
+  for (let i = 0; i < auxArray.length; i++) {
+    if (auxArray[i] === 'et') {
+      etCounter++;
+    }
+  }
+  console.log("Number of 'et' words in the string: ", etCounter);
+};
+
+// Bonus 2:
+
+let phraseToCheck = 'azaza azaza azaza';
+
+let checkPalindrome = string => {
+  let reverseString = string
+    .split('')
+    .reverse()
+    .join('');
+  if (reverseString === string) {
+    return true;
+  } else {
+    return false;
+  }
+};
